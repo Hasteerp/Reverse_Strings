@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+string ReverseString(string s)
+{ 
+ if(s == ""){return "";}
+ else{return s.substr(s.length()-1)+ReverseString(s.substr(0,s.length()-1));}
+}
+
+int main(int argc, char** argv) 
+{
+  cout << ReverseString(argv[1]) << endl;
+  return 0;
+}
